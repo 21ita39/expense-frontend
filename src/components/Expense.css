@@ -1,139 +1,6 @@
-/* .expense-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.table th {
-  background-color: #f2f2f2;
-}
-
-.table td {
-  vertical-align: middle;
-}
-
-.action-buttons button {
-  margin-right: 5px;
-}
-
-.category-filter {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.category-filter img {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.add-expense-container {
-  margin-top: 20px;
-}
-
-.add-expense-container h2 {
-  margin-bottom: 10px;
-}
-
-.add-expense-container select,
-.add-expense-container input[type="number"],
-.add-expense-container button {
-  margin-bottom: 10px;
-}
-
-.add-expense-container select,
-.add-expense-container input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.add-expense-container button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.add-expense-container button:hover {
-  background-color: #45a049;
-}
-
-
-
-.category-filter {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.category-filter img {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.category-filter img:hover {
-  border-color: #af4c4c;
-}
-
-button {
-  background-color: #e74c3c;
-  color: black;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #c0392b; 
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  border: 2px solid #3498db;
-}
-
-th, td {
-  border: 1px solid #3498db;
-  text-align: left;
-  padding: 10px;
-}
-
-th {
-  background-color: #3498db;
-  color: black;
-  font-weight: bold;
-} */
-
-
-
-/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, hsl(200, 100%, 50%), hsl(160, 100%, 50%));
   margin: 0;
   padding: 0;
 }
@@ -141,62 +8,74 @@ body {
 h1, h2 {
   color: #333;
   text-align: center;
+  margin-top: 30px;
   margin-bottom: 20px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px #aaa;
 }
 
 button {
-  background-color: #4CAF50; /* Green */
+  background: linear-gradient(45deg, blue, red);
   color: white;
   padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   margin-right: 10px;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: linear-gradient(45deg, blue, red);
+  transform: translateY(-2px);
 }
 
-input[type="number"] {
-  width: calc(100% - 20px);
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+input[type="number"], select {
+  width: calc(100% - 24px);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
   margin-bottom: 20px;
-}
-
-select {
-  width: calc(100% - 20px);
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
 }
 
 .table {
-  width: 100%;
+  width: 90%;
+  margin: 30px auto;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .table th, .table td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 
 .table th {
-  background-color: #f2f2f2;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
 }
 
 .add-expense-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  width: 90%;
+  margin: 30px auto;
+  padding: 30px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .add-expense-container form {
@@ -207,9 +86,18 @@ select {
 
 .add-expense-container button {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, #6b73ff, #000dff);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
+.add-expense-container button:hover {
+  background: linear-gradient(135deg, #4b5bff, #0008ff);
+  transform: translateY(-2px);
+}
