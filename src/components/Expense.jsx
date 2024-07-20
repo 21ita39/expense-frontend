@@ -26,7 +26,7 @@ const Expense = (props)=>{
 
 
     const handleDelete = async(id) => {
-        const response = await axios.delete(`https://expense-backend-nb0q.onrender.com/api/${id}`)
+        const response = await axios.delete(`https://expense-backend-1-qpwf.onrender.com/api/${id}`)
         const newUser = expense&&expense?.filter((ele) => ele._id !== id);
         setExpense(newUser);
     };
@@ -35,7 +35,7 @@ const Expense = (props)=>{
         e.preventDefault();
         if(!isEdit){
         
-            const response = await axios.post('https://expense-backend-nb0q.onrender.com/api',{ 
+            const response = await axios.post('https://expense-backend-1-qpwf.onrender.com/api',{ 
                 category: category,
                 amount: amount,
             });
@@ -45,7 +45,7 @@ const Expense = (props)=>{
             
         }
         else {
-            const response = await axios.put(`https://expense-backend-nb0q.onrender.com/api/${editId}`,{category,amount})
+            const response = await axios.put(`https://expense-backend-1-qpwf.onrender.com/api/${editId}`,{category,amount})
             console.log(response);
             const updatedArray = expense&&expense?.map((item)=>{
                 return item._id === editId ? { ...item,  category,  amount} : item;
